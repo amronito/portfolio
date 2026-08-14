@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <script>
+    if (window.location.protocol === "file:") {
+      var page = window.location.pathname.split("/").pop() || "index.html";
+      window.location.replace("http://localhost:8080/" + page);
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autres Projets — Omar Ben Maad</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Albert+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body class="project-page project-autres">
+  <canvas id="shaderCanvas"></canvas>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html#accueil" class="logo"></a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#accueil" data-i18n="nav_home">Accueil</a>
+        <a href="index.html#bio" data-i18n="nav_bio">Bio</a>
+        <a href="index.html#musique" data-i18n="nav_music">Projets</a>
+        <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+      </div>
+      <div class="nav-right">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+          <span class="lang-fr active-lang">FR</span>
+          <span class="lang-sep">|</span>
+          <span class="lang-en">EN</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Project -->
+  <section class="section project-hero">
+    <div class="container project-hero-content">
+      <a href="index.html#musique" class="project-back" data-i18n="project_back">? Retour aux projets</a>
+    </div>
+  </section>
+
+  <!-- Video -->
+  <section class="section">
+    <div class="container">
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb">
+            <div class="video-embed">
+              <iframe src="https://www.youtube-nocookie.com/embed/jQY8kYlnZZs" title="Autres Projets" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>
+          <p class="video-desc">Allchestra is a musical project that combines the elements of a classical symphonic orchestra with other genres of music such as Rock, Metal, Folk etc..</p>
+        </div>
+        <div class="video-card">
+          <div class="video-thumb">
+            <div class="video-embed">
+              <iframe src="https://www.youtube-nocookie.com/embed/v6Q-asOkWFY" title="Autres Projets" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>
+          <p class="video-desc">Extrait du concert de sortie de résidence de Broua à l'occasion de Elyssa fête la musique, vendredi 20 juin 2025, au Centre Culturel International de Hammamet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Portfolio Artiste. <span data-i18n="footer_rights">Tous droits réservés.</span></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

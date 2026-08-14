@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <script>
+    if (window.location.protocol === "file:") {
+      var page = window.location.pathname.split("/").pop() || "index.html";
+      window.location.replace("http://localhost:8080/" + page);
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bio — Omar Ben Maad</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Dancing+Script&family=Albert+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body>
+  <canvas id="shaderCanvas"></canvas>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html#accueil" class="logo"></a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#accueil" data-i18n="nav_home">Accueil</a>
+        <a href="index.html#bio" data-i18n="nav_bio">Bio</a>
+        <a href="index.html#musique" data-i18n="nav_music">Projets</a>
+        <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+      </div>
+      <div class="nav-right">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+          <span class="lang-fr active-lang">FR</span>
+          <span class="lang-sep">|</span>
+          <span class="lang-en">EN</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bio -->
+  <section id="bio" class="section">
+    <div class="container">
+      <div class="bio-content">
+        <div class="bio-text">
+          <p data-i18n="bio_par1">La découverte du monde du rock et du métal a éveillé en moi un côté rebelle et philosophe, dans la ville d'El Fahs où ce genre était rare à écouter. J'appréciais le fait que cette musique me distinguait des autres, et j'ai intégré ce style dans ma vie quotidienne. J'ai vite compris qu'il me fallait un instrument pour m'exprimer. Mon premier instrument fut une guitare classique, offerte par ma mère le jour de mon anniversaire : ce cadeau fut le plus beau de ma vie. Depuis, j'ai laissé derrière moi les jeux vidéo, les animes et un grand héritage de commerce pour consacrer plus de temps à apprendre la guitare sur YouTube. J'ai commencé par des mélodies simples et connues, et j'appréciais tout ce qui sortait de la guitare.</p>
+          <p data-i18n="bio_par2">J'ai cherché à partager avec quelqu'un d'autre, et j'ai trouvé Wissem Ben Maad. Nous avons commencé à faire des reprises ; la première vidéo a été partagée en 2015 sur Instagram. Ensuite, la rencontre avec Obayed Bouheni, le premier guitariste trouvé dans une ville déserte de musique occidentale, a maintenu mon amour pour la guitare. Avec lui, j'ai découvert l'improvisation et là, je me suis retrouvé en train de m'exprimer comme je le voulais. Nous avons passé des heures à le faire, puis nous avons décidé de créer un groupe local appelé Flouka Band, et nous avons joué lors d'événements locaux. J'ai compris que c'était la vie que je cherchais.</p>
+          <p data-i18n="bio_par3">Ensuite, j'ai terminé mes études au lycée et j'ai obtenu mon baccalauréat en mathématiques. Je me suis inscrit à l'Institut supérieur de musique de Tunis, où j'ai découvert le son profond et émouvant du violoncelle. Sans trop réfléchir, je me suis investi dans cet instrument et j'ai obtenu ma licence fondamentale en musique et musicologie en 2021. J'ai hâte de partager avec vous mon parcours à travers mes projets en cours et de réaliser le rêve d'adolescent qui grandit jour après jour.</p>
+          <a href="index.html#bio" class="project-back" data-i18n="bio_back">? Retour à l'accueil</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Portfolio Artiste. <span data-i18n="footer_rights">Tous droits réservés.</span></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

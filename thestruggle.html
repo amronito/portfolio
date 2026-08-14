@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <script>
+    if (window.location.protocol === "file:") {
+      var page = window.location.pathname.split("/").pop() || "index.html";
+      window.location.replace("http://localhost:8080/" + page);
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Struggle — Omar Ben Maad</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Albert+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body class="project-page project-strgl">
+  <canvas id="shaderCanvas"></canvas>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html#accueil" class="logo"></a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#accueil" data-i18n="nav_home">Accueil</a>
+        <a href="index.html#bio" data-i18n="nav_bio">Bio</a>
+        <a href="index.html#musique" data-i18n="nav_music">Projets</a>
+        <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+      </div>
+      <div class="nav-right">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+          <span class="lang-fr active-lang">FR</span>
+          <span class="lang-sep">|</span>
+          <span class="lang-en">EN</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Project -->
+  <section class="section project-hero">
+    <div class="container project-hero-content">
+      <a href="index.html#musique" class="project-back" data-i18n="project_back">? Retour aux projets</a>
+      <p class="project-hero-desc" data-i18n="strgl_desc">The Struggle, c'est l'histoire de trois amis que la vie a réunis une seconde fois pour jouer la musique qui les fait vibrer. De cette complicité retrouvée est né l'album "Dirty Town", un projet authentique et passionné.</p>
+    </div>
+  </section>
+
+  <!-- Audio Tracks -->
+  <section class="section">
+    <div class="container">
+      <div class="music-grid project-tracks">
+        <div class="music-card">
+          <div class="simple-player" data-src="audio/dirty town.mp3">
+            <button class="play-btn-simple" aria-label="Play">
+              <i class="fas fa-play"></i>
+            </button>
+            <div class="simple-player-info">
+              <span class="simple-track-name">Dirty Town</span>
+              <div class="simple-progress">
+                <div class="simple-progress-bar">
+                  <div class="simple-progress-fill"></div>
+                </div>
+                <span class="simple-time">0:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="music-card">
+          <div class="simple-player" data-src="audio/in_my_bones.mp3">
+            <button class="play-btn-simple" aria-label="Play">
+              <i class="fas fa-play"></i>
+            </button>
+            <div class="simple-player-info">
+              <span class="simple-track-name">In My Bones</span>
+              <div class="simple-progress">
+                <div class="simple-progress-bar">
+                  <div class="simple-progress-fill"></div>
+                </div>
+                <span class="simple-time">0:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos -->
+  <section class="section">
+    <div class="container">
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb">
+            <video class="video-player" preload="metadata">
+              <source src="video/the struggle/stand up.mp4" type="video/mp4">
+            </video>
+            <div class="video-play-overlay"><i class="fas fa-play"></i></div>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="video-thumb">
+            <video class="video-player" preload="metadata">
+              <source src="video/the struggle/mountain _brouva.mp4" type="video/mp4">
+            </video>
+            <div class="video-play-overlay"><i class="fas fa-play"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galerie -->
+  <section class="section">
+    <div class="container">
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="img/the struggle/strgl.jpg" alt="The Struggle">
+        </div>
+        <div class="gallery-item">
+          <img src="img/the struggle/strgl concert.jpg" alt="The Struggle Concert">
+        </div>
+        <div class="gallery-item">
+          <img src="img/the struggle/strgl chanoufi.jpg" alt="The Struggle Chanoufi">
+        </div>
+        <div class="gallery-item">
+          <img src="img/the struggle/strgl hatem.jpg" alt="The Struggle Hatem">
+        </div>
+        <div class="gallery-item">
+          <img src="img/the struggle/strgl l'artdoiz.jpg" alt="The Struggle l'Artdoiz">
+        </div>
+        <div class="gallery-item">
+          <img src="img/the struggle/497453747_1384724220165075_6245203451547932597_n.jpg" alt="The Struggle Photo">
+        </div>
+        <div class="gallery-item">
+          <img src="img/the struggle/497544695_1386619343308896_7393799845021837286_n.jpg" alt="The Struggle Photo">
+        </div>
+        <div class="gallery-item">
+          <img src="img/the struggle/Capture d'écran_3-8-2026_920_www.instagram.com.jpeg" alt="The Struggle Capture">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Portfolio Artiste. <span data-i18n="footer_rights">Tous droits réservés.</span></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <script>
+    if (window.location.protocol === "file:") {
+      var page = window.location.pathname.split("/").pop() || "index.html";
+      window.location.replace("http://localhost:8080/" + page);
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Artiste Musicien</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=UnifrakturMaguntia&family=Great+Vibes&family=Dancing+Script&family=Kaushan+Script&family=Mountains+of+Christmas&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body>
+  <canvas id="shaderCanvas"></canvas>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#accueil" class="logo"></a>
+      <div class="nav-links" id="navLinks">
+        <a href="#accueil" data-i18n="nav_home">Accueil</a>
+        <a href="#bio" data-i18n="nav_bio">Bio</a>
+        <a href="#musique" data-i18n="nav_music">Projets</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </div>
+      <div class="nav-right">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+          <span class="lang-fr active-lang">FR</span>
+          <span class="lang-sep">|</span>
+          <span class="lang-en">EN</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero / Accueil -->
+  <section id="accueil" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">Omar Ben Maad</h1>
+        <p class="hero-subtitle" data-i18n="hero_subtitle">Artiste-Musicien-Compisteur-Professeur</p>
+        <p class="hero-desc" data-i18n="hero_desc">Bienvenue sur mon portfolio. Découvrez mon univers musical entre création, enseignement et performance.</p>
+        <div class="hero-buttons">
+          <a href="#musique" class="btn btn-primary" data-i18n="hero_listen">Écouter</a>
+          <a href="#contact" class="btn btn-outline" data-i18n="hero_contact">Me Contacter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bio -->
+  <section id="bio" class="section">
+    <div class="container">
+      <div class="bio-content">
+        <div class="bio-text">
+          <p data-i18n="bio_par1">La découverte du monde du rock et du métal a éveillé en moi un côté rebelle et philosophe, dans la ville d'El Fahs où ce genre était rare à écouter. J'appréciais le fait que cette musique me distinguait des autres, et j'ai intégré ce style dans ma vie quotidienne. J'ai vite compris qu'il me fallait un instrument pour m'exprimer. Mon premier instrument fut une guitare classique, offerte par ma mère le jour de mon anniversaire : ce cadeau fut le plus beau de ma vie. Depuis, j'ai laissé derrière moi les jeux vidéo, les animes et un grand héritage de commerce pour consacrer plus de temps à apprendre la guitare sur YouTube. J'ai commencé par des mélodies simples et connues, et j'appréciais tout ce qui sortait de la guitare.</p>
+          <a href="bio.html" class="bio-read-more" data-i18n="bio_read_more">Lire la suite</a>
+          <div class="bio-social">
+            <a href="https://www.instagram.com/omar_ben_maad/?hl=fr" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/omar.benmaad" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Musique -->
+  <section id="musique" class="section bg-dark">
+    <div class="container">
+      <div class="project-links">
+        <a href="sacretincelle.html" class="project-link">
+          <h3 class="project-link-title">Sacré Étincelle</h3>
+        </a>
+        <a href="thestruggle.html" class="project-link">
+          <h3 class="project-link-title">The Struggle</h3>
+        </a>
+        <a href="autresprojets.html" class="project-link">
+          <h3 class="project-link-title">Autres Projets</h3>
+        </a>
+        <a href="solitude.html" class="project-link">
+          <h3 class="project-link-title">Solitude</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section bg-dark">
+    <div class="container">
+      <p class="section-desc" data-i18n="contact_desc">Envie de collaborer ou de me contacter ? Écrivez-moi !</p>
+      <div class="contact-grid">
+        <form class="contact-form" id="contactForm">
+          <input type="text" id="formName" placeholder="Votre nom" data-i18n-placeholder="form_name" required>
+          <input type="email" id="formEmail" placeholder="Votre email" data-i18n-placeholder="form_email" required>
+          <input type="text" id="formSubject" placeholder="Sujet" data-i18n-placeholder="form_subject">
+          <textarea id="formMessage" rows="6" placeholder="Votre message" data-i18n-placeholder="form_message" required></textarea>
+          <button type="submit" class="btn btn-primary" data-i18n="form_send">Envoyer</button>
+        </form>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <p>omarbenmaad@gmail.com</p>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <p>+216 98 117 129</p>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <p data-i18n="location">Tunis, Tunisie</p>
+          </div>
+          <div class="contact-social">
+            <a href="https://www.instagram.com/omar_ben_maad/?hl=fr" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/omar.benmaad" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Portfolio Artiste. <span data-i18n="footer_rights">Tous droits réservés.</span></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

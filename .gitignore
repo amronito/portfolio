@@ -1,0 +1,23 @@
+# Originaux audio (remplaces par MP3)
+*.wav
+
+# Videos non utilisees par le site
+video/club/
+video/the struggle/559182409_31711825968432090_2745160995758039845_n.mp4
+video/the struggle/597697421_25466983889621171_381437172492864011_n.mp4
+video/the struggle/live.mp4
+img/*.mp4
+
+# Fichiers importes / scrapes
+img/artdoiz.html
+img/artdoiz_files/
+artdoiz.html
+capture-frame.html
+
+# Documents personnels et outils locaux
+dossier-candidature/
+serve.ps1
+*.bat
+
+# Sauvegardes media
+portfolio_media_backup/

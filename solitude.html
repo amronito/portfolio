@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <script>
+    if (window.location.protocol === "file:") {
+      var page = window.location.pathname.split("/").pop() || "index.html";
+      window.location.replace("http://localhost:8080/" + page);
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solitude — Omar Ben Maad</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Albert+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body class="project-page project-solitude">
+  <canvas id="shaderCanvas"></canvas>
+  <button class="ambience-toggle" id="ambienceToggle" aria-label="Ambiance sonore">
+    <i class="fas fa-headphones"></i>
+  </button>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html#accueil" class="logo"></a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#accueil" data-i18n="nav_home">Accueil</a>
+        <a href="index.html#bio" data-i18n="nav_bio">Bio</a>
+        <a href="index.html#musique" data-i18n="nav_music">Projets</a>
+        <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+      </div>
+      <div class="nav-right">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+          <span class="lang-fr active-lang">FR</span>
+          <span class="lang-sep">|</span>
+          <span class="lang-en">EN</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Project -->
+  <section class="section project-hero">
+    <div class="container project-hero-content">
+      <a href="index.html#musique" class="project-back" data-i18n="project_back">? Retour aux projets</a>
+      <p class="project-hero-desc" data-i18n="solitude_desc">Sur le toit, je me retrouve face à la lune, au-dessus d'une ville vide. Les coques et les bêtes partagent cette sérénité sombre et mélancolique. Je me sens seul, mais accompagné à la fois par cette atmosphère grandiose.</p>
+    </div>
+  </section>
+
+  <!-- Audio Tracks -->
+  <section class="section">
+    <div class="container">
+      <div class="music-grid project-tracks">
+        <div class="music-card">
+          <div class="simple-player" data-src="audio/Nouveau dossier/Insomnie.mp3">
+            <button class="play-btn-simple" aria-label="Play">
+              <i class="fas fa-play"></i>
+            </button>
+            <div class="simple-player-info">
+              <span class="simple-track-name">Insomnie</span>
+              <div class="simple-progress">
+                <div class="simple-progress-bar">
+                  <div class="simple-progress-fill"></div>
+                </div>
+                <span class="simple-time">0:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="music-card">
+          <div class="simple-player" data-src="audio/Nouveau dossier/chienne_attache.mp3">
+            <button class="play-btn-simple" aria-label="Play">
+              <i class="fas fa-play"></i>
+            </button>
+            <div class="simple-player-info">
+              <span class="simple-track-name">Chienne Attachée</span>
+              <div class="simple-progress">
+                <div class="simple-progress-bar">
+                  <div class="simple-progress-fill"></div>
+                </div>
+                <span class="simple-time">0:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="music-card">
+          <div class="simple-player" data-src="audio/Nouveau dossier/meme_situation.mp3" data-end="191">
+            <button class="play-btn-simple" aria-label="Play">
+              <i class="fas fa-play"></i>
+            </button>
+            <div class="simple-player-info">
+              <span class="simple-track-name">Même Situation</span>
+              <div class="simple-progress">
+                <div class="simple-progress-bar">
+                  <div class="simple-progress-fill"></div>
+                </div>
+                <span class="simple-time">0:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="music-card">
+          <div class="simple-player" data-src="audio/Nouveau dossier/la fuite.mp3">
+            <button class="play-btn-simple" aria-label="Play">
+              <i class="fas fa-play"></i>
+            </button>
+            <div class="simple-player-info">
+              <span class="simple-track-name">La Fuite</span>
+              <div class="simple-progress">
+                <div class="simple-progress-bar">
+                  <div class="simple-progress-fill"></div>
+                </div>
+                <span class="simple-time">0:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="music-card">
+          <div class="simple-player" data-src="audio/Nouveau dossier/canicule.mp3">
+            <button class="play-btn-simple" aria-label="Play">
+              <i class="fas fa-play"></i>
+            </button>
+            <div class="simple-player-info">
+              <span class="simple-track-name">Canicule</span>
+              <div class="simple-progress">
+                <div class="simple-progress-bar">
+                  <div class="simple-progress-fill"></div>
+                </div>
+                <span class="simple-time">0:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Portfolio Artiste. <span data-i18n="footer_rights">Tous droits réservés.</span></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
